@@ -1,13 +1,14 @@
-Wolf, animes2/spice-and-wolf-2024, Ookami to Koushinryou
-Oshi no Ko, animes/oshi-no-ko, Oshi no Ko
-Alya, animes2/alya-sometimes-hides-her-feelings-in-russian, Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san
-Terrace, animes/the-cafe-terrace-and-its-goddesses, Megami no Cafe Terrace
-Pseudo, animes2/pseudo-harem, Giji Harem
-Hazurewaku, animes2/hazurewaku, Hazurewaku no Joutai Ijou Skill de Saikyou ni Natta Ore ga Subete wo Juurin Suru made
-SHY, animes2/shy, Shy
 2.5, animes2/2.5-dimensional-seduction, 2.5-jigen no Ririsa
-Exploration, animes2/a-nobodys-way-up-to-an-explorarion-hero, Mob kara Hajimaru Tansaku Eiyuutan
-Dahlia, animes2/dahlia-in-bloom-crafting-a-fresh-start-with-magical-tools, Madougushi Dahlia wa Utsumukanai
-Nokotan, animes2/my-deer-friend-nokotan, Shikanoko Nokonoko Koshitantan
-Remember, animes2/why-does-nobody-remember-me-in-this-world, Naze Boku no Sekai wo Daremo Oboeteinai no ka
-Makeine, animes2/makeine-too-many-losing-heroines, Make Heroine ga Oosugiru
+Appraisal, animes2/as-a-reincarnated-aristocrat-ill-use-my-appraisal-skill-to-rise-in-the-world, Tensei Kizoku Kantei Skill de Nariagaru
+Amagami, animes2/tying-the-knot-with-an-amagami-sister, Amagami-san Chi no Enmusubi
+History, animes2/i-ll-become-a-villainess-that-will-go-down-in-history, Rekishi ni Nokoru Akujo ni Naru zo
+ZERO, animes2/re-zero-starting-life-in-another-world, ReZero kara Hajimeru Isekai Seikatsu
+DAN DA DAN, animes2/dan-da-dan, Dandadan, CR
+Loner, animes2/loner-life-in-another-world, Hitoribocchi no Isekai Kouryaku
+Servant, animes2/you-are-ms-servant, Kimi wa Meido-sama
+Healer, animes2/the-healer-who-was-banished-from-his-party-is-in-fact-the-strongest, Party kara Tsuihou sareta Sono Chiyushi Jitsu wa Saikyou ni Tsuki
+TsumaSho, animes2/if-my-wife-became-an-elementary-school-student, Tsuma Shougakusei ni Naru
+Nina, animes2/nina-the-starry-bride, Hoshifuru Oukoku no Nina
+Damsel, animes2/the-do-over-damsel-conquers-the-dragon-emperor, Yarinaoshi Reijou wa Ryuutei Heika wo Kouryakuchuu
+Frontier, animes/shangri-la-frontier, Shangri-La Frontier
+Arifureta, animes2/arifureta, Arifureta Shokugyou de Sekai Saikyou
