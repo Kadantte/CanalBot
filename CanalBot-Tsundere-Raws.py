@@ -38,6 +38,7 @@ class txt:
     def __init__(self, file_name, type):
         self.file_name = file_name
         self.type = type
+        self.data = []
         txt.load_data(self)
         self.len = len(self.data)
 
@@ -84,6 +85,7 @@ class txt:
         index = 0
         for file in self.data:
             if file == "" or file not in qb_torrent_list:
+                print(f"deleting '{file}' from the processed list")
                 self.data.pop(index)
             index += 1
 
@@ -150,14 +152,14 @@ def check_size(srt_size):
         return False if float(srt_size[0:-4]) > 5.0 else True
     else:
         return True
-    
+
 def check_torrent(torrent_name, quality, size, broadcaster=None):
     if torrent_name.find(quality) != -1 and torrent_name.find("S00") == -1 and check_size(size):        # Right quality, size & not an ova
-        if (torrent_name.find('VOSTFR') != -1 and torrent_name.find("MULTi") == -1):                    # Only VOSTFR
+        if (torrent_name.find('VOSTFR') != -1 and torrent_name.find("MULTi") == -1) and torrent_name.find("AV1") == -1:                    # Only VOSTFR, no AV1
             if broadcaster != None:
                 if torrent_name.find(broadcaster) != -1:
                     return True
-            elif (torrent_name.find('CR') != -1 or torrent_name.find('ADN') != -1 or torrent_name.find("DSNP") != -1):
+            elif (torrent_name.find('CR') != -1 or torrent_name.find('ADN') != -1 or torrent_name.find("DSNP") != -1 or torrent_name.find("AMZN") != -1):
                 return True
     return False
 
@@ -177,20 +179,20 @@ def rss_search(keyword_list, quality):
     not_found = keyword_list.copy()
     entries = source_rss.entries
     entry_number = -1                                                                                           # -1 to start at the first result (because even before searching, we add 1 to entry_number)
-    
+
     for entry in entries:
         entry_number += 1                                                                                       # Here starts all the verifications on the torrents needed to identify them and making sure they follow certain rules.
 
         for keyword in keyword_list:
 
             broadcaster = get_broadcaster(keyword)
-            
+
             if keyword != "" and entry.title.find(keyword) != -1:                                                                               # Searching for a torrent with a corresponding keyword.
                 rss_torrent_title = entries[entry_number].title                                                                                 # Then search for the right quality, that has FRE subs or is a DSNP release (multi subs),
-                
+
                 if check_torrent(rss_torrent_title, quality, entries[entry_number].nyaa_size, broadcaster):                                   # that it comes from CR, ADN or DSNP and that is not an OVA (S00) nor a MULTi release.
                     torrent_index = search_index(rss_torrent_title)                                                                             # Then making sure this torrent is not a film or multiples episodes by checking its size, and then cheking its index (S**E**) is correct or exists
-                    
+
                     if torrent_index != None:
                         season_number, episode_number = rss_torrent_title[torrent_index + 1:torrent_index + 3], rss_torrent_title[torrent_index + 4:torrent_index + 6]
                         if not check_if_added(torrent_index, keyword, season_number, episode_number):                                           # Last but not least, check if the torrent was previously added in qBittorrent, and then add it if thats not the case
@@ -202,7 +204,7 @@ def rss_search(keyword_list, quality):
                             print(f'\033[90mTorrent "{rss_torrent_title}" have already been added..\033[0m')
                             rss_search_results.append(entries[entry_number].title)
                         not_found.remove(keyword) if keyword in not_found else not_found
-    
+
     # Cleaning the list before returning
     for keyword in not_found:
         if keyword == '':
