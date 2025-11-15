@@ -1,14 +1,11 @@
-2.5, animes2/2.5-dimensional-seduction, 2.5-jigen no Ririsa
-Appraisal, animes2/as-a-reincarnated-aristocrat-ill-use-my-appraisal-skill-to-rise-in-the-world, Tensei Kizoku Kantei Skill de Nariagaru
-Amagami, animes2/tying-the-knot-with-an-amagami-sister, Amagami-san Chi no Enmusubi
-History, animes2/i-ll-become-a-villainess-that-will-go-down-in-history, Rekishi ni Nokoru Akujo ni Naru zo
-ZERO, animes2/re-zero-starting-life-in-another-world, ReZero kara Hajimeru Isekai Seikatsu
-DAN DA DAN, animes2/dan-da-dan, Dandadan, CR
-Loner, animes2/loner-life-in-another-world, Hitoribocchi no Isekai Kouryaku
-Servant, animes2/you-are-ms-servant, Kimi wa Meido-sama
-Healer, animes2/the-healer-who-was-banished-from-his-party-is-in-fact-the-strongest, Party kara Tsuihou sareta Sono Chiyushi Jitsu wa Saikyou ni Tsuki
-TsumaSho, animes2/if-my-wife-became-an-elementary-school-student, Tsuma Shougakusei ni Naru
-Nina, animes2/nina-the-starry-bride, Hoshifuru Oukoku no Nina
-Damsel, animes2/the-do-over-damsel-conquers-the-dragon-emperor, Yarinaoshi Reijou wa Ryuutei Heika wo Kouryakuchuu
-Frontier, animes/shangri-la-frontier, Shangri-La Frontier
-Arifureta, animes2/arifureta, Arifureta Shokugyou de Sekai Saikyou
+Apothecary, animes/the-apothecary-diaries, Kusuriya no Hitorigoto
+Witch's, animes2/once-upon-a-witchs-death, Aru Majo ga Shinu Made
+Takamine, animes2/please-put-them-on-takamine-san, Haite Kudasai Takamine-san
+Beginning, animes2/the-beggining-after-the-end, Saikyou no Ousama Nidome no Jinsei wa Nani wo Suru
+Boy-Girl, animes2/can-a-boy-girl-friendship-survive, Danjo no Yuujou wa Seiritsu suru
+Slimes, animes2/la-sorciere-invincible-tueuse-de-slime-depuis-300-ans, Slime Taoshite 300-nen Shiranai Uchi ni Level Max ni Nattemashita
+Makina, animes2/makina-sans-a-love-bot, Kakushite Makina-san
+Yandere, animes2/yandere-dark-elf-she-chased-me-all-the-way-to-another-world, Chotto Dake Ai ga Omoi Dark Elf ga Isekai Kara Oikakete Kita
+WITCH WATCH, animes2/witch-watch, Witch Watch, CR
+Aharen-san, animes2/aharen-san-wa-hakarenai, Aharen-san wa Hakarenai
+Shiunji, animes2/the-shiunji-family-children, Shiunji-ke no Kodomotachi
