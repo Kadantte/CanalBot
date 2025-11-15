@@ -1,11 +1,13 @@
-Apothecary, animes/the-apothecary-diaries, Kusuriya no Hitorigoto
-Witch's, animes2/once-upon-a-witchs-death, Aru Majo ga Shinu Made
-Takamine, animes2/please-put-them-on-takamine-san, Haite Kudasai Takamine-san
-Beginning, animes2/the-beggining-after-the-end, Saikyou no Ousama Nidome no Jinsei wa Nani wo Suru
-Boy-Girl, animes2/can-a-boy-girl-friendship-survive, Danjo no Yuujou wa Seiritsu suru
-Slimes, animes2/la-sorciere-invincible-tueuse-de-slime-depuis-300-ans, Slime Taoshite 300-nen Shiranai Uchi ni Level Max ni Nattemashita
-Makina, animes2/makina-sans-a-love-bot, Kakushite Makina-san
-Yandere, animes2/yandere-dark-elf-she-chased-me-all-the-way-to-another-world, Chotto Dake Ai ga Omoi Dark Elf ga Isekai Kara Oikakete Kita
-WITCH WATCH, animes2/witch-watch, Witch Watch, CR
-Aharen-san, animes2/aharen-san-wa-hakarenai, Aharen-san wa Hakarenai
-Shiunji, animes2/the-shiunji-family-children, Shiunji-ke no Kodomotachi
+Rent, animes2/rent-a-girlfriend, Kanojo Okarishimasu
+Clevatess, animes2/clevatess, Clevatess Majuu no Ou to Akago to Shikabane no Yuusha
+Onmyo, animes2/onmyo-kaiten-rebirth, Onmyou Kaiten ReBirth Verse
+DAN DA DAN, animes2/dan-da-dan, Dandadan, CR
+Betrothed, animes2/bethroted-to-my-sisters-ex, Zutaboro Reijou wa Ane no Moto Konyakusha ni Dekiai sareru
+Night, animes/call-of-the-night, Yofukashi no Uta
+Brink, animes2/watari-kuns-xxxxxx-is-about-to-collapse, Watari-kun no xx ga Houkai Sunzen
+Silent, animes2/secrets-of-the-silent-witch, Silent Witch Chinmoku no Majo no Kakushigoto
+Dress-Up, animes/my-dress-up-darling, Sono Bisque Doll wa Koi wo Suru
+Dreaming, animes/grand-blue-dreaming, Grand Blue
+Cuckoos, animes/a-couple-of-cuckoos, Kakkou no Iinazuke
+Mikadono, animes2/dealing-with-mikadono-sisters-is-a-breeze, Mikadono Sanshimai wa Angai Choroi
+Takopi's, animes2/takopis-original-sin, Takopi-no-genzai
