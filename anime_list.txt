@@ -1,13 +1,16 @@
-Rent, animes2/rent-a-girlfriend, Kanojo Okarishimasu
-Clevatess, animes2/clevatess, Clevatess Majuu no Ou to Akago to Shikabane no Yuusha
-Onmyo, animes2/onmyo-kaiten-rebirth, Onmyou Kaiten ReBirth Verse
-DAN DA DAN, animes2/dan-da-dan, Dandadan, CR
-Betrothed, animes2/bethroted-to-my-sisters-ex, Zutaboro Reijou wa Ane no Moto Konyakusha ni Dekiai sareru
-Night, animes/call-of-the-night, Yofukashi no Uta
+WITCH WATCH, animes2/witch-watch, Witch Watch, CR
 Brink, animes2/watari-kuns-xxxxxx-is-about-to-collapse, Watari-kun no xx ga Houkai Sunzen
 Silent, animes2/secrets-of-the-silent-witch, Silent Witch Chinmoku no Majo no Kakushigoto
-Dress-Up, animes/my-dress-up-darling, Sono Bisque Doll wa Koi wo Suru
-Dreaming, animes/grand-blue-dreaming, Grand Blue
-Cuckoos, animes/a-couple-of-cuckoos, Kakkou no Iinazuke
-Mikadono, animes2/dealing-with-mikadono-sisters-is-a-breeze, Mikadono Sanshimai wa Angai Choroi
-Takopi's, animes2/takopis-original-sin, Takopi-no-genzai
+Thing, animes2/may-i-ask-for-one-final-thing, Saigo ni Hitotsu Dake Onegaishite mo Yoroshii Deshou ka
+Dusk, animes2/dusk-beyond-the-end-of-the-world, Towa no Yuugure
+Backstabbed, animes2/my-gift-lv9999-unlimited-gacha-backstabbed-in-a-backwater-dungeon-im-out-for-revenge, Shinjite Ita Nakama-tachi ni Dungeon Okuchi de Korosare Kaketaga Gift Mugen Gacha de Level 9999 no Nakama-tachi wo te ni Irete Mo>
+Wedding, animes2/tales-of-the-wedding-ring, Kekkon Yubiwa Monogatari
+SPY, animes2/spy-x-family, Spy x Family, CR
+Alma-chan, animes2/alma-chan-wants-to-have-a-family, Alma-chan wa Kazoku ni Naritai
+Little Sister, animes2/my-friends-little-sister-has-it-in-for-me, Tomodachi no Imouto ga Ore ni dake Uzai
+Ranma, animes2/ranma-½-2024, Ranma ½, NF
+Chitose, animes2/chitose-is-in-the-ramune-bottle, Chitose-kun wa Ramune Bin no Naka
+Obviously, animes2/my-status-as-an-assassin-obviously-exceed-the-heros, Ansatsusha de Aru Ore no Status ga Yuusha yori mo Akiraka ni Tsuyoi no da ga
+Villainess, animes2/the-dark-history-of-the-reincarnated-princess, Tensei Akujo no Kuro Rekishi
+Vampire, animes2/lil-miss-vampire-cant-suck-right, Chanto Suenai Kyuuketsuki-chan
+Marie, animes2/mechanical-marie, Kikaijikake no Marie
