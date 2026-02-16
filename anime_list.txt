@@ -1,16 +1,16 @@
-WITCH WATCH, animes2/witch-watch, Witch Watch, CR
-Brink, animes2/watari-kuns-xxxxxx-is-about-to-collapse, Watari-kun no xx ga Houkai Sunzen
-Silent, animes2/secrets-of-the-silent-witch, Silent Witch Chinmoku no Majo no Kakushigoto
-Thing, animes2/may-i-ask-for-one-final-thing, Saigo ni Hitotsu Dake Onegaishite mo Yoroshii Deshou ka
-Dusk, animes2/dusk-beyond-the-end-of-the-world, Towa no Yuugure
-Backstabbed, animes2/my-gift-lv9999-unlimited-gacha-backstabbed-in-a-backwater-dungeon-im-out-for-revenge, Shinjite Ita Nakama-tachi ni Dungeon Okuchi de Korosare Kaketaga Gift Mugen Gacha de Level 9999 no Nakama-tachi wo te ni Irete Mo>
-Wedding, animes2/tales-of-the-wedding-ring, Kekkon Yubiwa Monogatari
-SPY, animes2/spy-x-family, Spy x Family, CR
-Alma-chan, animes2/alma-chan-wants-to-have-a-family, Alma-chan wa Kazoku ni Naritai
-Little Sister, animes2/my-friends-little-sister-has-it-in-for-me, Tomodachi no Imouto ga Ore ni dake Uzai
-Ranma, animes2/ranma-½-2024, Ranma ½, NF
-Chitose, animes2/chitose-is-in-the-ramune-bottle, Chitose-kun wa Ramune Bin no Naka
-Obviously, animes2/my-status-as-an-assassin-obviously-exceed-the-heros, Ansatsusha de Aru Ore no Status ga Yuusha yori mo Akiraka ni Tsuyoi no da ga
-Villainess, animes2/the-dark-history-of-the-reincarnated-princess, Tensei Akujo no Kuro Rekishi
-Vampire, animes2/lil-miss-vampire-cant-suck-right, Chanto Suenai Kyuuketsuki-chan
-Marie, animes2/mechanical-marie, Kikaijikake no Marie
+Tamon's, animes2/tamons-b-side, Tamon-kun Ima Docchi!
+Kunon, animes2/kunon-the-sorcerer-can-see, Majutsushi Kunon wa Mieteiru
+Childhood, animes2/you-cant-be-in-a-rom-com-with-your-childhood-friends, Osananajimi to wa LoveCom ni Naranai
+Sentenced, animes2/sentenced-to-be-a-hero, Yuusha-kei ni Shosu Choubatsu Yuusha 9004-tai Keimu Kiroku
+Hana-Kimi, animes2/hana-kimi, Hanazakari no Kimitachi e
+Midnight, animes2/tune-in-to-the-midnight-heart, Mayonaka Heart Tune
+INCIDENT, animes2/darwins-incident, Darwin Jihen, H.264
+Cute, animes2/there-was-a-cute-girl-in-the-heros-party-so-i-tried-confessing-to-her, Yuusha Party ni Kawaii Ko ga Ita node Kokuhaku shitemita
+Arne, animes2/the-case-book-of-arne, Arne no Jikenbo
+SHIBOYUGI, animes2/shiboyugi-playing-death-games-to-put-food-on-the-table, Shibou Yuugi de Meshi wo Kuu
+Optimistic, animes2/easygoing-territory-defense-by-the-optimistic-lord, Okiraku Ryoushu no Tanoshii Ryouchi Bouei: Seisankei Majutsu de Na mo Naki Mura wo Saikyou no Jousai Toshi ni
+Chained, animes2/demon-slave, Mato Seihei no Slave
+Eris, animes2/the-holy-grail-of-eris, Eris no Seihai
+Champignon, animes2/champignon-witch, Champignon no Majo
+Oshi no Ko, animes/oshi-no-ko, Oshi no Ko, CR
+Frieren, animes/frieren-beyond-journeys-end, Sousou no Frieren
