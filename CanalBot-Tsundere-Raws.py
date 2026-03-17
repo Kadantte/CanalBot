@@ -1,6 +1,6 @@
 import feedparser
 from threading import Thread, Event
-from qbittorrent import Client
+import qbittorrentapi
 import os, sys, time, requests
 
 # Please change the following variables to your own settings
@@ -25,13 +25,13 @@ request_count = 0                           # Do not modify the following lines
 rss_search_results = []
 last_torrent_processed = None
 source_rss = []
-qb = Client(settings.webui_link)
+qb = None
 start_time = time.time()
 crash = False
 fail_count = 0
 new_torrent_found_list = []
 
-print("\033[1;96mCanalBot v0.8.1\033[0m")
+print("\033[1;96mCanalBot v0.9\033[0m")
 
 class txt:
 
@@ -139,8 +139,9 @@ def get_season_ep_number(torrent_name):
     return None
 
 def check_if_added(index, keyword, season_number, episode_number):
+    global qb
     check = False
-    for torrent in qb.torrents():
+    for torrent in qb.torrents_info():
         torrent_name = torrent['name']
         if torrent_name.find(keyword) != -1:
             if torrent_name[index + 1:index + 3] == season_number and torrent_name[index + 4:index + 6] == episode_number:
@@ -196,7 +197,7 @@ def rss_search(keyword_list, quality):
                     if torrent_index != None:
                         season_number, episode_number = rss_torrent_title[torrent_index + 1:torrent_index + 3], rss_torrent_title[torrent_index + 4:torrent_index + 6]
                         if not check_if_added(torrent_index, keyword, season_number, episode_number):                                           # Last but not least, check if the torrent was previously added in qBittorrent, and then add it if thats not the case
-                            qb.download_from_link(entries[entry_number].link)
+                            qb.torrents_add(urls=entries[entry_number].link)
                             rss_search_results.append(entries[entry_number].title)
                             print(f'\033[1;96m\033[1mFound : "{entries[entry_number].title}"\033[0m, torrent successfully added')
                             new_torrent_found_list.append(keyword) if keyword not in new_torrent_found_list else new_torrent_found_list         # Only add if the keyword isn't already in new_torrent_list
@@ -225,7 +226,7 @@ def clean_torrents():
                 torrent_file_name, torrent_id = torrent['name'], torrent['hash']
                 if torrent_file_name.find(anime_name) != -1 and torrent_file_name.find(f"E{ep_number}") != -1:
                     print(f'\033[1;91mDeleting "{torrent_file_name}"\033[0m')
-                    qb.delete_permanently(torrent_id)
+                    qb.torrents_delete(delete_files=True, torrent_hashes=torrent_id)
                     processed_list.clean_torrent_list(torrent_file_name)
 
 def rss_request():
@@ -239,21 +240,27 @@ def rss_request():
             success, crash = True, False
             feed = feedparser.parse(feed_request.content)
             return feed
-        except:
-            print("\033[1;91mError while retrieving RSS feed, next try in 10 seconds\033[0m")
-            wait(10)
+        except Exception as e:
+            print(f"\033[1;91mError: {e}, while retrieving RSS feed, next try in 30 seconds\033[0m")
+            wait(30)
 
 def qb_request():
     print("\n\033[93mConnection Request to qBittorrent WebUI\033[0m")
     success = False
     global crash
+    global qb
     while success == False:
         try:
-            qb.login(settings.user, settings.password)
+            qb = qbittorrentapi.Client(
+                host=settings.webui_link,
+                username=settings.user,
+                password=settings.password,
+            )
+            qb.auth_log_in()
             print("\033[1;92mConnection to qBittorrent WebUI successfully established\033[0m")
             success, crash = True, False
-        except:
-            print("\033[1;91mError while connecting to qBittorrent Web UI, next try in 3 minutes...\033[0m")
+        except Exception as e:
+            print(f"\033[1;91mError: {e}, while connecting to qBittorrent Web UI, next try in 3 minutes...\033[0m")
             crash = True
             wait(180)
 
@@ -328,7 +335,7 @@ if __name__ == "__main__":
                 if len(not_found_list) != 0:
                     print("No results for :", not_found_list)
                 try:
-                    torrents_info = qb.torrents()
+                    torrents_info = qb.torrents_info()
                 except:
                     print("\033[1;91mError while retrieving Torrents info from the qBittorrent Web UI\033[0m")
                     crash = True
@@ -351,7 +358,7 @@ if __name__ == "__main__":
                             if season_ep_number_combo != None:
 
                                 season_number, episode_number = season_ep_number_combo
-                                input_file_name = torrent['content_path'].replace(" ", "\ ").replace("(", "\(").replace(")", "\)").replace("\'", "\\'")    # Small changes needed in order to use the file in a linux command
+                                input_file_name = torrent['content_path'].replace(" ", "\\ ").replace("(", "\\(").replace(")", "\\)").replace("\'", "\\'")    # Small changes needed in order to use the file in a linux command
                                 output_file_name = f'{anime_name.replace(" ", ".")}.s{season_number}e{episode_number}.{settings.suffix}'.replace(" ", "-")      # Replace every space by a point to make sure there is no
 
                                 if settings.auto_encode == True:    # Encoding the file
@@ -418,7 +425,7 @@ if __name__ == "__main__":
                 wait(30)
                 qb_request()
 
-            else:
+            elif encode == True:
                 qb_request()
 
         elif len(source_rss) == 5:
