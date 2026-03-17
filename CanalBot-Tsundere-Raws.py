@@ -9,6 +9,7 @@ class settings:
     delete_torrents_afterwards = False                        # Delete torrents after they are no longer in the RSS search results
     auto_encode = True                                        # Set to True if you want to automatically encode the torrents (otherwise it'll just copy the file to the targer directory)
     lang = "french"                                           # Language you want the subtitles to be
+    audio_lang = "jpn"                                        # Language you want the audio to be (only for MULTi releases)
     extract_subtitles = False                                 # Extract (french) subs to animes/anime-name/s1/subtitles/anime.name.s1e01.vostfr.ass
     suffix = "vostfr"                                         # Episode name will be in this format : {anime_name}.s1e{episode_number}.{suffix}.mp4, Change this to whatever you want
     quality = "1080p"                                         # Video quality of the torrents
@@ -129,7 +130,7 @@ def search_index(file_name):
 def get_season_ep_number(torrent_name):
     index = search_index(torrent_name)
     if index != None:
-        index2 = torrent_name.find("VOSTFR")
+        index2 = torrent_name.find("VOSTFR") if torrent_name.find("MULTi") == -1 else torrent_name.find("MULTi")
         if index2 == -1:           # Handle the case of a toreent name from Disney plus, which is multi subs as there is no "VOSTFR" in the torrent_name
             index2 = torrent_name.find(settings.quality)
         if torrent_name[index + 1:index + 2] == "0":
@@ -156,7 +157,7 @@ def check_size(srt_size):
 
 def check_torrent(torrent_name, quality, size, broadcaster=None):
     if torrent_name.find(quality) != -1 and torrent_name.find("S00") == -1 and check_size(size):        # Right quality, size & not an ova
-        if (torrent_name.find('VOSTFR') != -1 and torrent_name.find("MULTi") == -1) and torrent_name.find("AV1") == -1:                    # Only VOSTFR, no AV1
+        if ((torrent_name.find('VOSTFR') != -1 and torrent_name.find("MULTi") == -1) or (broadcaster != None and torrent_name.find("MULTi") != -1) and torrent_name.find("AV1") == -1):
             if broadcaster != None:
                 if torrent_name.find(broadcaster) != -1:
                     return True
@@ -367,7 +368,10 @@ if __name__ == "__main__":
                                         print(f"\033[35mSkipping encoding for {file_name} : output file already exists\033[0m")
                                     else:
                                         print(f"\033[96mEncoding {file_name} to {settings.target_directory}/{file_info[1]}/s{season_number}/{output_file_name + '.mp4'}\033[0m..")
-                                        os.system(f"HandBrakeCLI -i {input_file_name} -o {settings.target_directory}/{file_info[1]}/s{season_number}/{output_file_name + '.mp4'} {settings.handbrake_settings}")
+                                        if file_name.find("MULTi") != -1:   # Not perfect, needs a rework but now it is la grosse flemme putain HandBrakeCLI casse les couilles putain
+                                            os.system(f"HandBrakeCLI -i {input_file_name} -o {settings.target_directory}/{file_info[1]}/s{season_number}/{output_file_name + '.mp4'} -vfr -e x264 -b 2500 -E av_aac -B 512 -T -2 -O --encoder-profile main --encoder-level 4.0 --audio-lang-list jpn -s 2 --subtitle-burn")
+                                        else:
+                                            os.system(f"HandBrakeCLI -i {input_file_name} -o {settings.target_directory}/{file_info[1]}/s{season_number}/{output_file_name + '.mp4'} {settings.handbrake_settings}")
                                         print("\033[92mDone !\033[0m")
                                         last_torrent_processed = file_name
                                         encode = True
@@ -393,7 +397,7 @@ if __name__ == "__main__":
                                 os.system(f"sudo chown {settings.linuxuser} {settings.target_directory}/{file_info[1]}/s{season_number}/{output_file_name + extension}")
                                 os.system(f"sudo chmod 775 {settings.target_directory}/{file_info[1]}/s{season_number}/{output_file_name + extension}")
 
-                                if settings.extract_subtitles == True and not os.path.exists(f"{settings.target_directory}/{file_info[1]}/s{season_number}/{output_file_name + '.mkv'}") and file_name.find("DSNP") == - 1:
+                                if settings.extract_subtitles == True and not os.path.exists(f"{settings.target_directory}/{file_info[1]}/s{season_number}/{output_file_name + '.mkv'}") and file_name.find("DSNP") == - 1 and file_name.find("MULTi") == -1:
                                     print("\033[0;35mExtracting french subtitles\033[0m")
                                     os.system(f"mkdir -p {settings.target_directory}/{file_info[1]}/s{season_number}/subtitles/")
                                     extract_command = f"mkvextract tracks {input_file_name} 2:{settings.target_directory}/{file_info[1]}/s{season_number}/subtitles/{output_file_name + '.ass'}"
