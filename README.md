@@ -13,11 +13,10 @@ Originally made to work on a **linux** server, with [JellyFin](https://github.co
 ### Install all requirements :
 ```
 apt-get install python3
-apt-get install qbittorrent-nox
 apt-get install handbrake-cli
 apt-get install mkvtoolnix
 pip3 install feedparser
-pip3 install python-qbittorrent
+pip3 install qbittorrent-api
 apt-get update && apt-get upgrade
 ```
 ## What does this script do ?
